@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areeba Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="player">
+
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">♪</div>
+                <div>
+                    <h1>Areeba</h1>
+                    <span>Music Studio</span>
+                </div>
+            </div>
+
+            <div class="menu-title">LIBRARY</div>
+
+            <button class="menu-item active">
+                <span>◉</span>
+                Discover
+            </button>
+
+            <button class="menu-item">
+                <span>♡</span>
+                Favorites
+            </button>
+
+            <button class="menu-item">
+                <span>◷</span>
+                Recently Played
+            </button>
+
+            <div class="menu-title playlist-title">PLAYLIST</div>
+
+            <div class="playlist-mini">
+                <div class="mini-cover cover-one"></div>
+                <div>
+                    <strong>Late Night</strong>
+                    <small>3 songs</small>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="top-header">
+                <div>
+                    <span class="welcome">YOUR PERSONAL SPACE</span>
+                    <h2>Listen & Relax</h2>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-avatar">A</div>
+                    <span>Areeba</span>
+                </div>
+            </header>
+
+
+            <section class="now-playing">
+
+                <div class="album-area">
+
+                    <div class="album-shadow"></div>
+
+                    <img
+                        id="cover"
+                        src="images/cover1.jpg"
+                        alt="Album Cover"
+                    >
+
+                    <div class="playing-badge">
+                        <span></span>
+                        NOW PLAYING
+                    </div>
+
+                </div>
+
+
+                <div class="song-info">
+
+                    <span class="label">CURRENT TRACK</span>
+
+                    <h1 id="songTitle">Attach</h1>
+
+                    <p id="artist">Areeba Collection</p>
+
+                    <div class="visualizer" id="visualizer">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+
+                    <div class="time-row">
+                        <span id="currentTime">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+
+                    <input
+                        type="range"
+                        id="progress"
+                        min="0"
+                        max="100"
+                        value="0"
+                    >
+
+                    <div class="controls">
+
+                        <button id="shuffle" class="control small">
+                            ⤨
+                        </button>
+
+                        <button id="previous" class="control">
+                            ⏮
+                        </button>
+
+                        <button id="play" class="play-button">
+                            ▶
+                        </button>
+
+                        <button id="next" class="control">
+                            ⏭
+                        </button>
+
+                        <button id="repeat" class="control small">
+                            ↻
+                        </button>
+
+                    </div>
+
+
+                    <div class="volume-area">
+
+                        <span>🔊</span>
+
+                        <input
+                            type="range"
+                            id="volume"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value="0.8"
+                        >
+
+                        <span id="volumeValue">80%</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="queue">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="label">UP NEXT</span>
+                        <h3>Your Playlist</h3>
+                    </div>
+
+                    <span id="trackCount">3 Tracks</span>
+
+                </div>
+
+
+                <div class="playlist" id="playlist"></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <audio id="audio"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
